@@ -1,0 +1,115 @@
+#metodo isinstance
+
+from collections.abc import Iterable
+cadena="Henry"
+numero=9
+
+isinstance(cadena,Iterable)
+isinstance(numero,Iterable)
+print(list("Henry"))
+print(sum([1,2,3]))
+#join es un metodo de python que toma un secuencia, como pude ser una cadena,lista o tupla y devuelve una cadena que contiene los elementos de la secuencias concatenados con un separador específico 
+print("-".join("Henry"))
+
+mi_dict={'a':1,'b':2,'c':3}
+for i in mi_dict:
+    print(i)
+
+libro=['pagina1','pagina2','pagina3','pagina4']
+marcapaginas=iter(libro)
+type(marcapaginas)
+print(next(marcapaginas))
+print(next(marcapaginas))
+
+lista_1=[1,2,3]
+lista_2=['a','b','c']
+combinacion=zip(lista_1, lista_2)
+print(type(combinacion))
+for elemento in combinacion: 
+    print(elemento)
+
+numeros=[1,2,3,4,5,6]
+pares_por_dos=[x*2 for x in numeros if x%2==0]
+print(pares_por_dos)
+
+
+frase="El perro de san roquee no tiene rabo"
+erres=[i for i in frase if i=='r']
+print(erres)
+print(len(erres))
+
+#----------------------------------------------------------------
+lista = [5,4,9,2]
+i=0
+while i < len(lista):
+    elemento = lista[i]
+    print(elemento)
+    i+=1
+    #Permiten iterar colecciones de datos que sean iterables. Si tenemos una determinada colección de datos, en este caso una lista con varios valores, y que#...remos mostrar sus valores uno a uno por pantalla podría resolverse de la siguiente manera con un while.    
+    lista = [5, 4, 9, 2]
+    for elemento in lista:
+        print(elemento)
+    #.-
+    
+    cadena = "Hola"
+    for c in cadena:        print(c)
+    
+    #..Además de obtener el elemento dentro del iterable, también es posible obtener el índice en el que está posicionado utilizando la función enumerate.
+    cadena ="Hola"
+for c in enumerate(cadena)   : print(i,c)
+
+#...
+#from collections import Iterable
+#
+
+#...
+print(list("Hola"))
+
+print(sum([1,2,3]))
+print("-".join("Hola"))
+mid_dict = {'a': 1, 'b': 2, 'c': 3}
+for i in mi_dict:
+    print(i)
+    #----
+    libro = ['página1', 'página2', 'página3', 'página4']
+    marcapaginas = iter(libro)
+
+    a=[1,2]
+    b=["Uno", "Dos"]
+    c= zip(a, b)
+    type(c)
+    zip
+    list(c)
+    [(1, 'Uno'), (2, 'Dos')]
+    def calcular_area_rectangulo(base,altura):
+        area = base * altura
+        return area
+    
+    def saludar (nombre, saludo ="Hola"): print (saludo + "," +nombre)
+    
+    def imprimir_mensaje():
+        print("¡Hola, mundo!")
+    
+    def sumar(sumando1, sumando2):
+        resultado = sumando1 + sumando2
+        return resultado
+    
+    def dividir(dividendo, divisor):
+        cociente = dividendo// divisor
+        resto = dividendo % divisor
+        return cociente, resto
+    
+    def ordenar_dos_numeros(num1=0, num2=0):
+        if (num1 > num2):        return num2, num1 
+        else:    return num1, num2
+    
+
+imprimir_mensaje()
+calcular_area_rectangulo(2,4)
+sumar(2,10)
+ordenar_dos_numeros(22,10)
+
+
+def factorial(numero):
+    if(numero>1):
+        numero=numero*factorial
